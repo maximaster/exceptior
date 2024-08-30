@@ -1,0 +1,29 @@
+{
+    "name": "maximaster/exceptior",
+    "description": "Functions collection to ease exception handling.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Maximaster\\Exceptior\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^5.2",
+        "friendsofphp/php-cs-fixer": "^3.63",
+        "vimeo/psalm": "^5.25"
+    },
+    "scripts": {
+        "test": "kahlan",
+        "lint": [
+            "psalm",
+            "php-cs-fixer check --diff"
+        ],
+        "check": ["composer run test", "composer run lint"]
+    },
+    "authors": [
+        {"name": "Лавриненко Максим", "email": "maxim.lavrinenko@maximaster.ru"}
+    ]
+}

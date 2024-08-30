@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "php@8.2",
+    "php82Packages.composer@latest"
+  ],
+  "env": {
+    "PATH": "$PWD/vendor/bin:$PATH"
+  }
+}
