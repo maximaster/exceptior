@@ -91,4 +91,22 @@ class Ex
             return $suppressValue;
         }
     }
+
+    /**
+     * Suppress worker throwed exception into null.
+     *
+     * @psalm-template WorkerReturn
+     *
+     * @psalm-param callable():WorkerReturn $worker
+     *
+     * @psalm-return WorkerReturn|null
+     */
+    public static function nullize(callable $worker)
+    {
+        try {
+            return $worker();
+        } catch (Throwable $throwable) {
+            return null;
+        }
+    }
 }

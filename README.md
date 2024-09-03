@@ -56,6 +56,16 @@ Ex::normalize($giveString, $normaizeToMessage); // === 'hello'
 Ex::normalize($wouldThrow, $normaizeToMessage); // === 'no hello'
 ```
 
+## CASE #4: return worker value or null if worker throws an exception
+
+```php
+$giveString = fn () => 'hello'
+$wouldThrow = fn () => throw new Exception('no hello');
+
+Ex::nullize($giveString); // === 'hello'
+Ex::nullize($wouldThrow); // === null
+```
+
 ## Development
 
-Fork &rarr; Fix &rarr; `composer check` &rarr; PR.
+Fork &rarr; Edit &rarr; `composer check` &rarr; PR.
