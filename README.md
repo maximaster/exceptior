@@ -56,7 +56,7 @@ Ex::normalize($giveString, $normaizeToMessage); // === 'hello'
 Ex::normalize($wouldThrow, $normaizeToMessage); // === 'no hello'
 ```
 
-## CASE #4: return worker value or null if worker throws an exception
+## CASE #5: return worker value or null if worker throws an exception
 
 ```php
 $giveString = fn () => 'hello'
